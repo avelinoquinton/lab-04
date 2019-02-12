@@ -26,7 +26,7 @@ public class AnimalTest
     public void fullConstructorTest() throws AssertException
     {
     	Animal animalTwo = new Animal("Orange", "Tony", 200.1, 20.1);
-    	String expectedToString = "Tony, a orange-colored animal. 200.1 pounds, 20.1 inches\n";
+    	String expectedToString = "Tony, a Orange-colored animal. 200.1 pounds, 20.1 inches\n";
     	
     	Assert.assertEquals(200.1, animalTwo.getWeight(), 0.01);
     	Assert.assertEquals(20.1, animalTwo.getHeight(), 0.01);

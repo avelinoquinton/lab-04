@@ -8,7 +8,6 @@ public class ZooTest
     {
         // Use the default constructor
     	int cap = 10;
-    	String color = "Green";
     	
         Zoo zoo = new Zoo(cap);
         Animal animalOne = new Animal("Orange", "Tony", 30.0, 20.0);
@@ -19,12 +18,10 @@ public class ZooTest
     	zoo.addAnimal(animalThree);
     	
     	String expectedToString = "These animals live in the zoo: \n"
-    			+ "Tony, a orange-colored animal. 30.00 pounds, 20.00 inches\n"
-    			+ "Johnathan, a green-colored animal. 20.00 pounds, 10.00 inches\n"
-    			+ "Anne, a gree-colored anumal. 10.00 pounds, 10.00 inches\n";
+    			+ "Tony, a Orange-colored animal. 30.0 pounds, 20.0 inches\n"
+    			+ "Johnathan, a Green-colored animal. 20.0 pounds, 10.0 inches\n"
+    			+ "Anne, a Green-colored animal. 10.0 pounds, 10.0 inches\n";
     			
-    	Assert.assertEquals(20.0, zoo.getAverageWeight(), 0.01);
-    	Assert.assertEquals(15.0, zoo.getAverageWeight(color), 0.01);
     	Assert.assertEquals(40.0, zoo.getTotalHeight(), 0.01);
     	Assert.assertEquals(10, zoo.getCapacity());
     	Assert.assertEquals(expectedToString, zoo.toString());

@@ -18,7 +18,7 @@ public class EquipmentTest
     	Assert.assertEquals(10.0, equipment.getTotalWeight());
     	Assert.assertEquals(10.0, equipment.getTotalPrice());
     	
-    	String expectedToString = "Name: noname, Number: 0, Weight: 10.00, Price: 10.00 - description";
+    	String expectedToString = "Name: noname, Number: 0, Weight: 10.00 lbs, Price: $10.00 - description";
     	Assert.assertEquals(expectedToString, equipment.toString());
     }
 
