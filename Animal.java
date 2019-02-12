@@ -123,25 +123,41 @@ public class Animal
     public boolean equals(Object other)
     {
     	  // Return true if the exact same object:
+ 
         if (other == this)
         {
             return true;
         }
 
         // Return false if the other object is not an Animal:
-        // (use instanceof to do this)
+        // (use instance of to do this)
         if (!(other instanceof Animal))
         {
             return false;
         }
 
         // Cast object to Animal type to compare member variables:
-        Animal otherAni = (Animal)other;
-
-        // Check that all fields match (color, name, weight, height):
+      
+        if (this.getClass() != other.getClass())
+        {
+        	return false;
+        }
         
-        // TODO: finish this...
+        Animal otherAni = (Animal)other; 
         
-        /* return TODO; */
+        if(otherAni.getName().equals(this.getName())){
+        	 if(otherAni.getColor().equals(this.getColor())) {
+             	if(otherAni.getWeight() == this.getWeight()) {
+             		if(otherAni.getHeight() == this.getHeight()) {
+             			return true;
+             		}
+             	}
+             }
+        }
+        else {
+        	return false;
+        }
+        
+        return true;
     }
 }

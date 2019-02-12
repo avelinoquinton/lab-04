@@ -113,7 +113,7 @@ public class Equipment
         }
 
         // Return false if the other object is not an Equipment:
-        // (use instanceof to do this)
+        // (use instance of to do this)
         if (!(other instanceof Equipment))
         {
             return false;
