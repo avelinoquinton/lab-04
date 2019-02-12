@@ -137,26 +137,24 @@ public class Animal
         }
 
         // Cast object to Animal type to compare member variables:
-      
-        if (this.getClass() != other.getClass())
-        {
-        	return false;
-        }
         
         Animal otherAni = (Animal)other; 
         
-        if(otherAni.getName().equals(this.getName())){
-        	 if(otherAni.getColor().equals(this.getColor())) {
-             	if(otherAni.getWeight() == this.getWeight()) {
-             		if(otherAni.getHeight() == this.getHeight()) {
-             			return true;
-             		}
-             	}
-             }
-        }
-        else {
+        if(!(otherAni.getName().equals(this.getName()))){
         	return false;
         }
+        	
+        if(!(otherAni.getColor().equals(this.getColor()))) {
+        	return false;
+        }
+        
+        if(!(otherAni.getWeight() == this.getWeight())) {
+        	return false;
+        }
+        
+        if(!(otherAni.getHeight() == this.getHeight())) {
+        	return false;
+        } 		
         
         return true;
     }
